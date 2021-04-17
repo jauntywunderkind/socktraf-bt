@@ -39,3 +39,12 @@ END
 {
   clear(@inetsocket);
 }
+
+interval:s:1
+{
+  time()
+  print(@recv_bytes);
+  print(@send_bytes);
+  clear(@recv_bytes);
+  clear(@send_bytes);
+}
